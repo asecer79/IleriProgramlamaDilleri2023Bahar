@@ -7,9 +7,7 @@ namespace Week05
     {
         static void Main(string[] args)
         {
-            
-
-
+            Human ahmet = new Human();
         }
     }
 
