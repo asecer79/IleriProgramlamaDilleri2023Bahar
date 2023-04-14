@@ -8,5 +8,6 @@ namespace Week04
 {
     internal class Ogrenci
     {
+
     }
 }
