@@ -69,7 +69,7 @@ namespace Week10
         //polymorphism example
     }
 
-    #region Inherticance 0
+    #region Inheritance 0
     //class Animal
     //{
     //    public void Eat()
