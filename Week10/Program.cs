@@ -55,27 +55,21 @@ namespace Week10
                 animal.Eat();
             }
 
+        }
+        //static void MessageSender(IMessageService messageService)
+        //{
+        //    messageService.SendMessage();
+        //}
+
+        //static void MessageSender(MessageService messageService)
+        //{
+        //    messageService.SendMessage();
+        //}
+
+        //polymorphism example
     }
 
-    //  static void MessageSender(IMessageService messageService)
-    //{
-    //    messageService.SendMessage();
-    //}
-
-    //static void MessageSender(MessageService messageService)
-    //{
-    //    messageService.SendMessage();
-    //}
-
-
-
-    //polymorphism example
-
-
-}
-
     #region Inherticance 0
-
     //class Animal
     //{
     //    public void Eat()
@@ -429,10 +423,10 @@ namespace Week10
     #region Abstract Classes
 
     abstract class MessageService
-    { 
-        public  abstract  void  SendMessage();
+    {
+        public abstract void SendMessage();
 
-        public virtual void  CheckConnection()
+        public virtual void CheckConnection()
         {
             Console.WriteLine("Connection checked");
         }
@@ -449,13 +443,13 @@ namespace Week10
 
         public sealed override void CheckConnection()
         {
-           //....
+            //....
         }
     }
 
     //class Whatsup : SmsService
     //{
-      
+
     //}
     class EmailService : MessageService
     {
