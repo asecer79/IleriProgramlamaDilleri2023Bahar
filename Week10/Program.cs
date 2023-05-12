@@ -1,7 +1,6 @@
 ﻿
 namespace Week10
 {
-
     class Program
     {
         static void Main(string[] args)
@@ -41,19 +40,33 @@ namespace Week10
             //MessageSender(new TeleGraph());
 
             //polymorphism example
-            List<Animal> animals = new List<Animal>()
-            {
-                new Animal(),
-                new Dog(),
-                new Bird(),
+            //List<Animal> animals = new List<Animal>()
+            //{
+            //    new Animal(),
+            //    new Dog(),
+            //    new Bird(),
 
-            };
+            //};
 
+            //List<Animal> animals = new List<Animal>()
+            //{
+            //    new Dog(),
+            //    new Bird(),
+            //};
 
-            foreach (var animal in animals)
-            {
-                animal.Eat();
-            }
+            //List<IAnimal> animals = new List<IAnimal>()
+            //{
+            //    new Dog(),
+            //    new Bird(),
+            //};
+
+            //foreach (var animal in animals)
+            //{
+            //    animal.Eat();
+            //}
+
+            Proceess(new Bird());
+            Proceess(new Dog());
 
         }
         //static void MessageSender(IMessageService messageService)
@@ -67,7 +80,19 @@ namespace Week10
         //}
 
         //polymorphism example
+
+        //static void Proceess(IAnimal animal)
+        //{
+        //    animal.Eat();
+        //}
+
+        static void Proceess(Animal animal)
+        {
+            animal.Eat();
+        }
     }
+
+
 
     #region Inheritance 0
     //class Animal
@@ -470,9 +495,87 @@ namespace Week10
 
     #region PolyMoprhism
 
+    //class Animal
+    //{
+    //    public virtual void Eat()
+    //    {
+    //        Console.WriteLine("Eating....");
+    //    }
+    //}
+
+    //abstract class Animal
+    //{
+    //    public abstract void Eat();
+    //}
+
+    //class Dog : Animal
+    //{
+    //    public override void Eat()
+    //    {
+    //        Console.WriteLine("Dog Eating....");
+    //    }
+    //}
+
+    //class Bird : Animal
+    //{
+    //    public override void Eat()
+    //    {
+    //        Console.WriteLine("Bird Eating....");
+    //    }
+    //}
+
+
+    //interface IAnimal
+    //{
+    //    void Eat();
+    //}
+
+    //class Dog : IAnimal
+    //{
+    //    public  void Eat()
+    //    {
+    //        Console.WriteLine("Dog Eating....");
+    //    }
+    //}
+
+    //class Bird : IAnimal
+    //{
+    //    public void Eat()
+    //    {
+    //        Console.WriteLine("Bird Eating....");
+    //    }
+    //}
+
+
+
+    //class Animal
+    //{
+    //    public virtual void Eat()
+    //    {
+    //        Console.WriteLine("Eating....");
+    //    }
+    //}
+
+    //class Dog : Animal
+    //{
+    //    public override void Eat()
+    //    {
+    //        Console.WriteLine("Dog Eating....");
+    //    }
+    //}
+
+    //class Bird : Animal
+    //{
+    //    public override void Eat()
+    //    {
+    //        Console.WriteLine("Bird Eating....");
+    //    }
+    //}
+
+
     class Animal
     {
-        public virtual void Eat()
+        public  void Eat()
         {
             Console.WriteLine("Eating....");
         }
@@ -480,7 +583,7 @@ namespace Week10
 
     class Dog : Animal
     {
-        public override void Eat()
+        public  void Eat()
         {
             Console.WriteLine("Dog Eating....");
         }
@@ -488,13 +591,12 @@ namespace Week10
 
     class Bird : Animal
     {
-        public override void Eat()
+        public  void Eat()
         {
             Console.WriteLine("Bird Eating....");
         }
     }
 
     #endregion
-
 }
 
