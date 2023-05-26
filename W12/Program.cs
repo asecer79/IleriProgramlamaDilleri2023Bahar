@@ -90,7 +90,6 @@ namespace Week12
 
             dop(1, 2, Divide);
 
-
             Action<double, double, MathOps> m = (x, y, callback) =>
             {
                 var res = callback(x, y);
@@ -100,7 +99,6 @@ namespace Week12
             m(3, 4, Divide);
 
             Func<double, double, double> f1 = Sum;
-
 
             Func<double, double, double> f2 = (x, y) =>
             {
