@@ -66,7 +66,7 @@ namespace Week12
 
             #endregion
 
-            Complex c1 = 5;
+            Complex c1 = 5; //implicit conversion
 
             Console.WriteLine(c1);
 
