@@ -116,6 +116,13 @@ namespace Week12
         }
 
         //"(2,3)" =----> 2+3i
+
+        private double x = 2;
+
+        private int xx = (int)2.5;
+
+
+
         public static explicit operator Complex(string c)   //var c = (Complex)"(3,2)";
         {
             c = c.Replace(" ", "");
@@ -124,6 +131,11 @@ namespace Week12
             double imaginary = Convert.ToDouble(c.Split(",")[1]);
 
             return new Complex(real, imaginary);
+        }
+
+        public static implicit operator Complex(double d)   //Complex c = 23;
+        {
+            return new Complex(d, 0);
         }
 
 

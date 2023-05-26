@@ -65,7 +65,10 @@ namespace Week12
 
 
             #endregion
-            
+
+            Complex c1 = 5;
+
+            Console.WriteLine(c1);
 
             //MyDelegate del = ShowMessage;
 
@@ -79,33 +82,33 @@ namespace Week12
             //DoMathOperation(2, 4, Product);
 
 
-            MathOps del = Sum; //Multicast delegates
-            del += Subtract;
-            del += Divide;
-            del += Product;
+            //MathOps del = Sum; //Multicast delegates
+            //del += Subtract;
+            //del += Divide;
+            //del += Product;
 
-            del.Invoke(1, 2);
+            //del.Invoke(1, 2);
 
-            Action<double, double, MathOps> dop = DoMathOperation;
+            //Action<double, double, MathOps> dop = DoMathOperation;
 
-            dop(1, 2, Divide);
+            //dop(1, 2, Divide);
 
-            Action<double, double, MathOps> m = (x, y, callback) =>
-            {
-                var res = callback(x, y);
-                Console.WriteLine(res);
-            };
+            //Action<double, double, MathOps> m = (x, y, callback) =>
+            //{
+            //    var res = callback(x, y);
+            //    Console.WriteLine(res);
+            //};
 
-            m(3, 4, Divide);
+            //m(3, 4, Divide);
 
-            Func<double, double, double> f1 = Sum;
+            //Func<double, double, double> f1 = Sum;
 
-            Func<double, double, double> f2 = (x, y) =>
-            {
-                return x + y;
-            };
+            //Func<double, double, double> f2 = (x, y) =>
+            //{
+            //    return x + y;
+            //};
 
-            Console.WriteLine(f1(3,4));
+            //Console.WriteLine(f1(3,4));
 
         }
 
